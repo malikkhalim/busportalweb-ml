@@ -1,0 +1,15 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Find Bus Route</h2>
+    <form method="POST" action="{{ url_for('show_map') }}">
+        <div class="form-group">
+            <label for="bus_service_numbers">Bus Service Numbers (comma separated):</label>
+            <input type="text" id="bus_service_numbers" name="bus_service_numbers" placeholder="e.g., 99, 185" required>
+        </div>
+        <button type="submit">Show Map</button>
+    </form>
+</div>
+{% endblock %}
